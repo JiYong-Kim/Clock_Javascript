@@ -3,16 +3,25 @@ const currTime = document.querySelector('.time');
 let finalDate = currDate.querySelector("h1");
 
 
+
+const lengthChange = (num) => {
+  if(String(num).length<2){
+    return String(num).padStart(2,'0');
+  }
+  return num;
+}
+
+
 const clk = ()=>{
   let clck = new Date();
   let currYr = clck.getFullYear();
-  let currMonth = clck.getMonth()+1;
-  let currDay = clck.getDate();
-  let currHr  = clck.getHours();
-  let currMin = clck.getMinutes();
-  let currSec = clck.getSeconds();
+  let currMonth = lengthChange(clck.getMonth()+1);
+  let currDay = lengthChange(clck.getDate());
+  let currHr  = lengthChange(clck.getHours());
+  let currMin = lengthChange(clck.getMinutes());
+  let currSec = lengthChange(clck.getSeconds());
   currDate.innerText = `${currYr} ${currMonth} ${currDay}`;
-  currTime.innerText = `${currHr} ${currMin} ${currSec}`;
+  currTime.innerText = `${currHr} : ${currMin} : ${currSec}`;
 }
 
 const final = () => {

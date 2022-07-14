@@ -1,0 +1,26 @@
+.container {
+  height: 500px;
+  text-align: center;  
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.clock {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Roboto', sans-serif;
+}
+
+.date {
+  font-size: 100px;
+  text-align: center;
+}
+
+.time {
+  font-size: 100px;
+  text-align: center;
+}
